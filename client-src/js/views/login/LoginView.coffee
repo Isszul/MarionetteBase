@@ -34,11 +34,7 @@ define ["jquery"
 			#By Default focus on the username input
 			$('#username').focus()
 				
-			#When we push enter on the password input attempt the login	
-			$('#password').keypress (e) ->
-				$("#loginButton").click() if(e.which == 13)
-
-			@					
+			
 					
   
 	#Return the class definition
