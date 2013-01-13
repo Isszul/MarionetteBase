@@ -44,5 +44,5 @@ define ["views/login/LoginView",
 			MyApp.app_router.bind 'all', @checkLoggedIn, this
 
 			#logout route
-			MyApp.app_router.route 'logout', 'logout', _.bind(@logoutUser, this)
+			MyApp.app_router.route 'logout', 'logout', @logoutUser
 
