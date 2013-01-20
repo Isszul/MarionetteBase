@@ -12,9 +12,7 @@ define(["backbone", "backbone.marionette", "router", "modules/user/UserModule", 
       threeJSDemo: new ThreeJSDemoView(),
       treeView: new TreeView()
     },
-    loadModules: function() {
-      return this.module("UserModule", UserModule);
-    }
+    loadModules: function() {}
   });
   app.addRegions({
     navBar: "#navBar",

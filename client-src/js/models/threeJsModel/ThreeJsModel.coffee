@@ -24,6 +24,9 @@ define ["jquery"
 
                 @model = new THREE.Mesh(@geometry, @materials[0])
 
+                @model.position.x = @model.position.y = @model.position.z = 0
+                @model.scale.x = @model.scale.y = @model.scale.z = 0.1
+
                 @scene.add @model
 
                 @loaded = true                

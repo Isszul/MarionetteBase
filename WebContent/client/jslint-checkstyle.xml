@@ -1,7 +1,7 @@
 <checkstyle><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\app.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\main.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\models\threeJsModel\ThreeJsModel.js'>
-<error line='15' column='28' severity='warning' message='Unexpected &apos;=&apos;.' source='com.googlecode.jslint4java.JSLint'/>
+<error line='17' column='28' severity='warning' message='Unexpected &apos;=&apos;.' source='com.googlecode.jslint4java.JSLint'/>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\models\user\UserModel.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\modules\user\UserModule.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\nls\fr-fr\general.js'>
@@ -16,6 +16,7 @@
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\views\threeJSDemo\ThreeJSDemoView.js'>
 <error line='13' column='46' severity='warning' message='Missing &apos;()&apos;.' source='com.googlecode.jslint4java.JSLint'/>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\js\views\tree\TreeView.js'>
+</file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\models\ciscoSwitch\switch.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\models\cube\cube.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\test\models\user\UserModelSpec.js'>
 </file><file name='E:\Project\MarionetteBase-Coffeescript\WebContent\client\test\runWebDriverTests.js'>

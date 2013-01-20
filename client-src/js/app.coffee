@@ -28,7 +28,8 @@ define ["backbone"
 			treeView: new TreeView()
 	
 		loadModules: ->
-			@module("UserModule", UserModule)
+			return
+			#@module("UserModule", UserModule)
 
 
 	# Setup the regions we will use on the page
