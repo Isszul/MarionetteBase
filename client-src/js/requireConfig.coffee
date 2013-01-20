@@ -29,10 +29,15 @@ require.config
 		"translationUtil": "utils/translationUtil"
 		"i18n": "../libs/require/i18n"
 		"threejs" : "../libs/threejs/three.min"
+		"threeDetector": "../libs/threejs/Detector"
 
 
 	#Maps the interdependancies
 	shim:
+
+		threejs:
+			deps: ["threeDetector"]
+
 		underscore:
 			exports: "_"
 

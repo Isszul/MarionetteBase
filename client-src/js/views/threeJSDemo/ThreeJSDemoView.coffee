@@ -21,7 +21,11 @@ define ["jquery"
             @NEAR = 0.1
             @FAR = 10000
 
-            @renderer = new THREE.WebGLRenderer    
+            if Detector.webgl 
+                @renderer = new THREE.WebGLRenderer() 
+            else
+                @renderer = new THREE.CanvasRenderer()    
+                
             @renderer.setSize @WIDTH, @HEIGHT
 
             @camera = new THREE.PerspectiveCamera(

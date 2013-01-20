@@ -10,7 +10,11 @@ define(["jquery", "underscore", "backbone.marionette", "text!templates/threeJSDe
       this.ASPECT = this.WIDTH / this.HEIGHT;
       this.NEAR = 0.1;
       this.FAR = 10000;
-      this.renderer = new THREE.WebGLRenderer;
+      if (Detector.webgl) {
+        this.renderer = new THREE.WebGLRenderer();
+      } else {
+        this.renderer = new THREE.CanvasRenderer();
+      }
       this.renderer.setSize(this.WIDTH, this.HEIGHT);
       this.camera = new THREE.PerspectiveCamera(this.VIEW_ANGLE, this.ASPECT, this.NEAR, this.FAR);
       this.camera.position.z = 4;
