@@ -38,7 +38,7 @@ define ["jquery"
 
             @camera.lookAt @scene.position 
 
-            @cubeModel = new ThreeJsModel("./models/ciscoswitch/switch.js", @scene)
+            @cubeModel = new ThreeJsModel("./models/cube/cube.js", @scene)
 
             @pointLight = new THREE.PointLight(0xFFFFFF)
             @pointLight.position.x = 1
@@ -51,9 +51,8 @@ define ["jquery"
 
             if(@cubeModel.loaded == true)
 
-                @cubeModel.model.rotation.y += 0.01
-                @cubeModel.model.rotation.z += 0.01
                 @cubeModel.model.rotation.x += 0.01
+                @cubeModel.model.rotation.y += 0.01
 
                 @renderer.render @scene, @camera
 

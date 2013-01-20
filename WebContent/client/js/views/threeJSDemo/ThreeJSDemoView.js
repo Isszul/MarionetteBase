@@ -17,7 +17,7 @@ define(["jquery", "underscore", "backbone.marionette", "text!templates/threeJSDe
       this.scene = new THREE.Scene();
       this.scene.add(this.camera);
       this.camera.lookAt(this.scene.position);
-      this.cubeModel = new ThreeJsModel("./models/ciscoswitch/switch.js", this.scene);
+      this.cubeModel = new ThreeJsModel("./models/cube/cube.js", this.scene);
       this.pointLight = new THREE.PointLight(0xFFFFFF);
       this.pointLight.position.x = 1;
       this.pointLight.position.y = 5;
@@ -26,9 +26,8 @@ define(["jquery", "underscore", "backbone.marionette", "text!templates/threeJSDe
     },
     renderScene: function() {
       if (this.cubeModel.loaded === true) {
-        this.cubeModel.model.rotation.y += 0.01;
-        this.cubeModel.model.rotation.z += 0.01;
         this.cubeModel.model.rotation.x += 0.01;
+        this.cubeModel.model.rotation.y += 0.01;
         this.renderer.render(this.scene, this.camera);
       }
       return requestAnimationFrame(_.bind(this.renderScene, this));

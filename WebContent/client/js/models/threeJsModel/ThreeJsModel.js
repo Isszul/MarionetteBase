@@ -11,8 +11,6 @@ define(["jquery", "underscore", "backbone.marionette", "translationUtil", "three
         this.geometry = geometry;
         this.materials = materials;
         this.model = new THREE.Mesh(this.geometry, this.materials[0]);
-        this.model.position.x = this.model.position.y = this.model.position.z = 0;
-        this.model.scale.x = this.model.scale.y = this.model.scale.z = 0.1;
         this.scene.add(this.model);
         return this.loaded = true;
       }, this));
