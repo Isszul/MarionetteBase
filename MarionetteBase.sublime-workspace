@@ -31,6 +31,42 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client-src/js/models/threeJsModel/ThreeJsModel.coffee",
+			"settings":
+			{
+				"buffer_size": 694,
+				"line_ending": "Unix",
+				"name": "define[\"jquery\""
+			}
+		},
+		{
+			"file": "client-src/js/router.coffee",
+			"settings":
+			{
+				"buffer_size": 970,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "define [\"backbone\"\n		\"backbone.marionette\"\n		\"router\"\n		\"modules/user/UserModule\"\n		\"views/navbar/NavBarView\"\n		\"views/plainOldTemplate/PlainOldTemplate\"\n		\"views/tree/TreeView\"\n		\"views/threeJSDemo/ThreeJSDemoView\"\n		\n], (Backbone, Marionette, Router, UserModule, NavBarView, PlainOldTemplate, TreeView, ThreeJSDemoView ) ->\n\n	\"use strict\"\n	\n	# Class definition for the main Application\n	app = new Marionette.Application\n		\n		# Single Models\n		Models: {}\n		\n		# Collections of models\n		Collections: {}\n		\n		#Registered views\n		Views:\n			desktopView: new PlainOldTemplate(\"templates/desktop/desktopTemplate.html\")\n			navBarView: new NavBarView()\n			threeJSDemo: new ThreeJSDemoView()\n			treeView: new TreeView()\n	\n		loadModules: ->\n			@module(\"UserModule\", UserModule)\n\n\n	# Setup the regions we will use on the page\n	app.addRegions \n		navBar: \"#navBar\"\n		mainRegion: \"#mainRegion\"\n	\n	# Add an initializer to setup the router\n	app.addInitializer ->\n		@app_router = new Router this\n		this\n\n		\n	app\n\n	\n\n\n\n\n\n\n\n\n",
+			"file": "client-src/js/app.coffee",
+			"file_size": 1001,
+			"file_write_time": 130031740551260234,
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client-src/js/views/threeJSDemo/ThreeJSDemoView.coffee",
+			"settings":
+			{
+				"buffer_size": 519,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Java/Ant.sublime-build",
 	"command_palette":
@@ -56,6 +92,15 @@
 	},
 	"file_history":
 	[
+		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/ThreeJSDemo/threeJSDemoTemplate.html",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/placeHolder/placeHolderTemplate.html",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/navbar/navBarTemplate.html",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/requireConfig.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/nls/root/general.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/index.html",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/main.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/utils/translationUtil.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/models/user/UserModel.coffee",
 		"/C/MarionetteBase/src/js/views/login/LoginView.coffee",
 		"/C/MarionetteBase/src/js/router.coffee",
 		"/C/MarionetteBase/src/js/modules/user/UserModule.coffee",
@@ -174,16 +219,7 @@
 		"/C/Users/Alex/Desktop/modular-backbone/build-tools/.jshintignore",
 		"/C/Users/Alex/Desktop/modular-backbone/build-tools/run-jshint.bat",
 		"/C/Users/Alex/Desktop/modular-backbone/js/.jshintignore",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/run-jsl.bat",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/jshint-r12/run-jshint.bat",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/jshint-r12/.r2config",
-		"/C/Users/Alex/Desktop/modular-backbone/js/models/user/UserModelTestRunner.html",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/jsl-0.3.0/run-jsl.bat",
-		"/C/Users/Alex/Desktop/modular-backbone/js/views/login/LoginViewTestRunner.html",
-		"/C/Users/Alex/Desktop/modular-backbone/js/views/login/LoginViewSpec.js",
-		"/C/Users/Alex/Desktop/modular-backbone/js/models/user/TestRunner.html",
-		"/C/Users/Alex/Desktop/modular-backbone/TestRunner.html",
-		"/C/Users/Alex/Desktop/modular-backbone/templates/TestRunner.html"
+		"/C/Users/Alex/Desktop/modular-backbone/build-tools/run-jsl.bat"
 	],
 	"find":
 	{
@@ -230,8 +266,119 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client-src/js/models/threeJsModel/ThreeJsModel.coffee",
+					"settings":
+					{
+						"buffer_size": 694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								94
+							]
+						],
+						"settings":
+						{
+							"auto_name": "define[\"jquery\"",
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client-src/js/router.coffee",
+					"settings":
+					{
+						"buffer_size": 970,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client-src/js/app.coffee",
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client-src/js/views/threeJSDemo/ThreeJSDemoView.coffee",
+					"settings":
+					{
+						"buffer_size": 519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								467,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

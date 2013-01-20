@@ -14,7 +14,7 @@ define ["backbone"
 			"desktop": "showDesktop"
 
 			#placeholder
-			"placeholder": "showPlaceHolder"
+			"threeJS": "showThreeJSDemo"
 
 			#Tree
 			"tree": "showTree"
@@ -31,16 +31,16 @@ define ["backbone"
 			@
 
 		#Shows the tree in the main region
-		showTree: ->
+		showTree: () ->
 			@app.mainRegion.show @app.Views.treeView
 
 		#Shows the desktop in the main Region
-		showDesktop:  ->
+		showDesktop:  () ->
 			@app.mainRegion.show @app.Views.desktopView
 
-		#Show the placeholder
-		showPlaceHolder:  ->
-			@app.mainRegion.show @app.Views.placeHolder
+		#Show the threeJSDemo
+		showThreeJSDemo:  () ->
+			@app.mainRegion.show @app.Views.threeJSDemo
 
 	
 

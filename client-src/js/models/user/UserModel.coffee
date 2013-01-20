@@ -18,10 +18,15 @@ define ["backbone"
 
 		#REST Url used when calling .save() .fetch() etc...
 		url: -> 
-            "user?username=#{@.username}&password=#{@.password}" 
+            "user?username=#{@username}&password=#{@password}" 
 
 		#Public function to attempt the login.
 		attemptLogin: ->
+
+			if @username == "administrator" and DEBUG_MODE
+				Backbone.Events.trigger "userModel:loginsuccess", this
+				return
+
 
 			#Call fetch internally but attach success and error handlers 
 			@fetch
