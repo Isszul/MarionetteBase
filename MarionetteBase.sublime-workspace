@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"render",
+				"renderScene"
+			],
+			[
 				"logout",
 				"logoutUser"
 			],
@@ -35,35 +39,32 @@
 			"file": "client-src/js/models/threeJsModel/ThreeJsModel.coffee",
 			"settings":
 			{
-				"buffer_size": 694,
+				"buffer_size": 722,
 				"line_ending": "Unix",
 				"name": "define[\"jquery\""
-			}
-		},
-		{
-			"file": "client-src/js/router.coffee",
-			"settings":
-			{
-				"buffer_size": 970,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "define [\"backbone\"\n		\"backbone.marionette\"\n		\"router\"\n		\"modules/user/UserModule\"\n		\"views/navbar/NavBarView\"\n		\"views/plainOldTemplate/PlainOldTemplate\"\n		\"views/tree/TreeView\"\n		\"views/threeJSDemo/ThreeJSDemoView\"\n		\n], (Backbone, Marionette, Router, UserModule, NavBarView, PlainOldTemplate, TreeView, ThreeJSDemoView ) ->\n\n	\"use strict\"\n	\n	# Class definition for the main Application\n	app = new Marionette.Application\n		\n		# Single Models\n		Models: {}\n		\n		# Collections of models\n		Collections: {}\n		\n		#Registered views\n		Views:\n			desktopView: new PlainOldTemplate(\"templates/desktop/desktopTemplate.html\")\n			navBarView: new NavBarView()\n			threeJSDemo: new ThreeJSDemoView()\n			treeView: new TreeView()\n	\n		loadModules: ->\n			@module(\"UserModule\", UserModule)\n\n\n	# Setup the regions we will use on the page\n	app.addRegions \n		navBar: \"#navBar\"\n		mainRegion: \"#mainRegion\"\n	\n	# Add an initializer to setup the router\n	app.addInitializer ->\n		@app_router = new Router this\n		this\n\n		\n	app\n\n	\n\n\n\n\n\n\n\n\n",
-			"file": "client-src/js/app.coffee",
-			"file_size": 1001,
-			"file_write_time": 130031740551260234,
-			"settings":
-			{
-				"buffer_size": 1007,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "client-src/js/views/threeJSDemo/ThreeJSDemoView.coffee",
 			"settings":
 			{
-				"buffer_size": 519,
+				"buffer_size": 1854,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client-src/templates/threeJSDemo/threeJSDemoTemplate.html",
+			"settings":
+			{
+				"buffer_size": 108,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 121,
 				"line_ending": "Windows"
 			}
 		}
@@ -79,7 +80,7 @@
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"distraction_free":
 	{
@@ -92,13 +93,16 @@
 	},
 	"file_history":
 	[
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/requireConfig.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/main.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/router.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/js/app.coffee",
+		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/threeJSDemo/threeJSDemoTemplate.html",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/ThreeJSDemo/threeJSDemoTemplate.html",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/placeHolder/placeHolderTemplate.html",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/templates/navbar/navBarTemplate.html",
-		"/E/Project/MarionetteBase-Coffeescript/client-src/js/requireConfig.coffee",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/js/nls/root/general.coffee",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/index.html",
-		"/E/Project/MarionetteBase-Coffeescript/client-src/js/main.coffee",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/js/utils/translationUtil.coffee",
 		"/E/Project/MarionetteBase-Coffeescript/client-src/js/models/user/UserModel.coffee",
 		"/C/MarionetteBase/src/js/views/login/LoginView.coffee",
@@ -216,10 +220,7 @@
 		"/C/Users/Alex/Desktop/modular-backbone/run-jsl.bat",
 		"/C/Users/Alex/Desktop/modular-backbone/build-tools/jsl-0.3.0/jsl.default.conf",
 		"/C/Users/Alex/Desktop/modular-backbone/.jshintignore",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/.jshintignore",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/run-jshint.bat",
-		"/C/Users/Alex/Desktop/modular-backbone/js/.jshintignore",
-		"/C/Users/Alex/Desktop/modular-backbone/build-tools/run-jsl.bat"
+		"/C/Users/Alex/Desktop/modular-backbone/build-tools/.jshintignore"
 	],
 	"find":
 	{
@@ -266,7 +267,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -274,15 +275,15 @@
 					"file": "client-src/js/models/threeJsModel/ThreeJsModel.coffee",
 					"settings":
 					{
-						"buffer_size": 694,
+						"buffer_size": 722,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								94
+								631,
+								631
 							]
 						],
 						"settings":
@@ -300,51 +301,50 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client-src/js/router.coffee",
+					"file": "client-src/js/views/threeJSDemo/ThreeJSDemoView.coffee",
 					"settings":
 					{
-						"buffer_size": 970,
+						"buffer_size": 1854,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								356,
-								363
+								1559,
+								1559
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "client-src/js/app.coffee",
+					"file": "client-src/templates/threeJSDemo/threeJSDemoTemplate.html",
 					"settings":
 					{
-						"buffer_size": 1007,
+						"buffer_size": 108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								987,
-								987
+								78,
+								78
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -354,24 +354,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client-src/js/views/threeJSDemo/ThreeJSDemoView.coffee",
+					"file": ".gitignore",
 					"settings":
 					{
-						"buffer_size": 519,
+						"buffer_size": 121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								467,
-								467
+								120,
+								120
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
