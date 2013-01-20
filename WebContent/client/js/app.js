@@ -1,5 +1,5 @@
 
-define(["backbone", "backbone.marionette", "router", "modules/user/UserModule", "views/navbar/NavBarView", "views/plainOldTemplate/PlainOldTemplate", "views/tree/TreeView"], function(Backbone, Marionette, Router, UserModule, NavBarView, PlainOldTemplate, TreeView) {
+define(["backbone", "backbone.marionette", "router", "modules/user/UserModule", "views/navbar/NavBarView", "views/plainOldTemplate/PlainOldTemplate", "views/tree/TreeView", "views/threeJSDemo/ThreeJSDemoView"], function(Backbone, Marionette, Router, UserModule, NavBarView, PlainOldTemplate, TreeView, ThreeJSDemoView) {
   "use strict";
 
   var app;
@@ -9,7 +9,7 @@ define(["backbone", "backbone.marionette", "router", "modules/user/UserModule", 
     Views: {
       desktopView: new PlainOldTemplate("templates/desktop/desktopTemplate.html"),
       navBarView: new NavBarView(),
-      placeHolder: new PlainOldTemplate("templates/placeHolder/placeHolderTemplate.html"),
+      threeJSDemo: new ThreeJSDemoView(),
       treeView: new TreeView()
     },
     loadModules: function() {

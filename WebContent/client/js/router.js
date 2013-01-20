@@ -6,7 +6,7 @@ define(["backbone", "backbone.marionette"], function(Backbone, Marionette) {
   AppRouter = Marionette.AppRouter.extend({
     routes: {
       "desktop": "showDesktop",
-      "placeholder": "showPlaceHolder",
+      "threeJS": "showThreeJSDemo",
       "tree": "showTree",
       "": "showDesktop"
     },
@@ -21,8 +21,8 @@ define(["backbone", "backbone.marionette"], function(Backbone, Marionette) {
     showDesktop: function() {
       return this.app.mainRegion.show(this.app.Views.desktopView);
     },
-    showPlaceHolder: function() {
-      return this.app.mainRegion.show(this.app.Views.placeHolder);
+    showThreeJSDemo: function() {
+      return this.app.mainRegion.show(this.app.Views.threeJSDemo);
     }
   });
   return AppRouter;

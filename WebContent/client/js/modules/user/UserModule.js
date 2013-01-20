@@ -34,7 +34,7 @@ define(["views/login/LoginView", "models/user/UserModel"], function(LoginView, U
       Backbone.Events.on("userModel:loginfailure", this.showFailedLoginMessage, this);
       Backbone.Events.on("loginView:login", this.attemptLogin, this);
       MyApp.app_router.bind('all', this.checkLoggedIn, this);
-      return MyApp.app_router.route('logout', 'logout', _.bind(this.logoutUser, this));
+      return MyApp.app_router.route('logout', 'logout', this.logoutUser);
     });
   };
 });

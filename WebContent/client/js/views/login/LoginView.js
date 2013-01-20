@@ -18,13 +18,7 @@ define(["jquery", "underscore", "backbone.marionette", "text!templates/login/log
         e.preventDefault();
         return Backbone.Events.trigger("loginView:login");
       });
-      $('#username').focus();
-      $('#password').keypress(function(e) {
-        if (e.which === 13) {
-          return $("#loginButton").click();
-        }
-      });
-      return this;
+      return $('#username').focus();
     }
   });
   return LoginView;

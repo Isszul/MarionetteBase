@@ -4,6 +4,7 @@ define({
   desktop: "Desktop",
   logout: "Logout",
   tree: "Tree",
+  threeJS: "ThreeJS",
   username_label: "Username",
   password_label: "Password",
   login_label: "Login",
